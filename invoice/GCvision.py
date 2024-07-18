@@ -3,7 +3,7 @@ import logging
 import os
 
 # Set Google Cloud credentials environment variable
-service_account_path = "/etc/secrets/zeta-ascent-425607-d8-93027003e046.json"
+service_account_path = "/etc/secrets/zeta-ascent-425607-d8-93027003e046"
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = service_account_path
 
 # Ensure the uploads directory exists
