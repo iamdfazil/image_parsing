@@ -6,6 +6,9 @@ import os
 service_account_path = "/etc/secrets/zeta-ascent-425607-d8-93027003e046.json"
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = service_account_path
 
+# Verify that the environment variable is set correctly
+logging.debug(f"GOOGLE_APPLICATION_CREDENTIALS: {os.getenv('GOOGLE_APPLICATION_CREDENTIALS')}")
+
 # Ensure the uploads directory exists
 os.makedirs('uploads', exist_ok=True)
 
