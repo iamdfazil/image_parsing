@@ -2,14 +2,6 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from invoice.routes import router as open_ai_route
 from invoice.auth import router as auth_route
-import os
-
-# Set Google Cloud credentials environment variable
-service_account_path = "/etc/secrets/zeta-ascent-425607-d8-93027003e046.json"
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = service_account_path
-
-# Ensure the uploads directory exists
-os.makedirs('uploads', exist_ok=True)
 
 app = FastAPI(title='Image_Parser', version='1.0.0')
 
